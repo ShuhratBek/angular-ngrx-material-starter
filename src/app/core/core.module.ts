@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -24,6 +25,10 @@ import { reducers, metaReducers } from './core.state';
     // ngrx
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot([AuthEffects]),
+    StoreDevtoolsModule.instrument({
+      name: 'Angular NgRx Material Starter',
+      logOnly: environment.production
+    }),
 
     // 3rd party
     TranslateModule.forRoot({
