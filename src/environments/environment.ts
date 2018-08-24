@@ -9,6 +9,7 @@ export const environment = {
   appName: 'Angular Ngrx Material Starter',
   envName: 'DEV',
   production: false,
+  hmr: false,
   test: false,
   i18nPrefix: '',
   versions: {

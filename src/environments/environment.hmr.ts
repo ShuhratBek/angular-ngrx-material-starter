@@ -2,10 +2,10 @@ const packageJson = require('../../package.json');
 
 export const environment = {
   appName: 'Angular Ngrx Material Starter',
-  envName: 'TEST',
+  envName: 'DEV',
   production: false,
-  hmr: false,
-  test: true,
+  hmr: true,
+  test: false,
   i18nPrefix: '',
   versions: {
     app: packageJson.version,
